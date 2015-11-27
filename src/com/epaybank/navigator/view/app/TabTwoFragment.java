@@ -29,8 +29,8 @@ public class TabTwoFragment extends AppFragment{
 		tabhost.setTabTextSelectColor(getResources().getColor(R.color.tab_text));
 		tabhost.setTabTextSize(18);
 		
-		tabhost.addTab(tabhost.newTab().setText(getString(R.string.tab_top_friend)).setFragment(new SocialFragment()));
-		tabhost.addTab(tabhost.newTab().setText(getString(R.string.tab_top_friend)).setFragment(new ChatRoomFragment()));
+		tabhost.addTab(tabhost.newTab().setText(getString(R.string.tab_top_social)).setFragment(new SocialFragment()));
+		tabhost.addTab(tabhost.newTab().setText(getString(R.string.tab_top_chatroom)).setFragment(new ChatRoomFragment()));
 		return tabhost.getView();
 	}
 }

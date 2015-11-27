@@ -14,6 +14,7 @@ public class SocialFragment extends AppFragment{
 	public View createView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		View view=inflater.inflate(R.layout.fragment_social, null);
 		
+		
 		return view;
 	}
 }

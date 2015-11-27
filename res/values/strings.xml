@@ -9,6 +9,8 @@
 	<string name="btn_register">立即注册</string>
 	
 	<string name="tab_top_friend">人气好友</string>
+	<string name="tab_top_social">动态</string>
+	<string name="tab_top_chatroom">聊吧</string>
 	
 	<string name="tab_main">主页</string>
 	<string name="tab_ugc">互动</string>
