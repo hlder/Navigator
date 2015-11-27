@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#FFE7EBE7</color>
+    <color name="black">#FF000000</color>
+    <color name="no_color">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#FFF5F5F5</color>
+    <color name="red">#FFFF0000</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="green">#FF00FF00</color>
+    <color name="mine_width_line">#DCDCDC</color>
+    <color name="title_bg">#FF7A39</color>
+    <color name="title_bg_yellow">#F9C80F</color>
+    <color name="text_no_click">#969696</color>
+    <color name="main_frist_money_text">#FC573C</color>
+    <color name="main_frist_bg">#F2F2F2</color>
+    <color name="main_frist_line">#BEBEBE</color>
+    <color name="main_frist_btn_text">#FF5B0B</color>
+    <color name="main_frist_item_text">#555555</color>
+    <color name="main_third_item_text">#FF8F21</color>
+    <color name="main_third_item_text_bg">#F8CB37</color>
+    <color name="main_third_item_text_hint">#7C7C7C</color>
+    <color name="three_third_item_title">#2ABFE4</color>
+    <color name="three_third_item_all_more">#FF7272</color>
+    <color name="three_third_item_day">#FF440B</color>
+    <color name="three_third_item_btn_text">#FF7A39</color>
+    <color name="three_frist_item_text">#7B7B7B</color>
+    <color name="three_frist_item_bg">#FF6B6B</color>
+    <color name="second_talk_bg">#F2F2F2</color>
+    <color name="second_line">#C0C0C0</color>
+    <color name="second_black">#FF5A09</color>
+    <color name="call_me_text">#D83A3A</color>
+    <color name="three_login">#A0A0A0</color>
+    <color name="phone_help">#808080</color>
+    <color name="register_bg">#EEEEEE</color>
+    <color name="speak_line">#E5E5E5</color>
+    <color name="retransmission_bg">#F3F3F1</color>
+    
+    
+    <color name="mine_name">#646464</color>
+    <color name="mine_number">#C8C8C8</color>
+    <color name="mine_hint_text">#969696</color>
+    <color name="recommend_code">#50C3FF</color>
+    <color name="mine_unit_text">#050505</color>
+    <color name="loan_draw_money">#19C319</color>
+    <color name="mine_money_text">#FE981A</color>
+    <color name="loan_draw_money_to">#FF981A</color>
+    <color name="mine_gold_text">#FF5555</color>
+    <color name="hint_bg">#E6F0F5</color>
+    <color name="hint_bg_text">#414B50</color>
+    <color name="edit_text_color">#CCCCCC</color>
+    <color name="mine_xinyong_text">#4DCB4B</color>
+    <color name="login_text">#23B4FF</color>
+    <color name="title_text">#4B5052</color>
+    <color name="judge_hint_text">#050505</color>
+    <color name="judge_text">#D73232</color>
+    <color name="judge_item_text">#FF9429</color>
+    <color name="pro_text">#323232</color>
+    <color name="hint_text">#FF3535</color>
+    <color name="hint_text_002">#646464</color>
+    <color name="index_loan_text">#FF4141</color>
+    <color name="index_cp_text">#FF6464</color>
+    <color name="index_cp_text_last">#32B9FF</color>
+    <color name="index_qty_text">#3DBEFF</color>
+    <color name="wv_title_text">#1E556E</color>
+    <color name="bind_bank_card_dialog_text">#FF3DB6F2</color>
+    <color name="gold_award_title">#FFC3C3C3</color>
+    <color name="main_item_text">#FF5A00</color>
+    <color name="main_item_text_no">#666666</color>
+    <color name="main_item_text_name">#333333</color>
+    <color name="date_text">#999999</color>
+    <color name="find_password">#555555</color>
+    
+    
+    
+    
+
+</resources>
