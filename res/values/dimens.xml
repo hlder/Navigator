@@ -5,10 +5,23 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_padding">10dp</dimen>
     
+    <!-- 好友列表中头像的大小 -->
+    <dimen name="photo_list_size">50dip</dimen>
+    
+    <!-- 登录界面头部logo的离上面的距离 -->
     <dimen name="main_logo_mar_top">20dip</dimen>
+    <!-- 登录界面logo的大小 -->
     <dimen name="main_logo_w">87dip</dimen>
     
-    
+    <!--  -->
     <dimen name="logo_min_size">50dip</dimen>
+    
+    <!-- tab页图表的大小 -->
+    <dimen name="tab_img_size">30dip</dimen>
+    <!-- tab页字体的大小 -->
+    <dimen name="tab_txt_size">12sp</dimen>
 
+    
+    <!-- 控件之间的距离 -->
+    <dimen name="view_mar">5dip</dimen>
 </resources>

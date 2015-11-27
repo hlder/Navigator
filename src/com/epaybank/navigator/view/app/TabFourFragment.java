@@ -5,14 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.epaybank.navigator.R;
 import com.epaybank.navigator.view.AppFragment;
 
-public class TabThreeFragment extends AppFragment{
+public class TabFourFragment extends AppFragment{
+
 	@Override
 	public View createView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view=inflater.inflate(R.layout.fragment_tab_three, null);
-		return view;
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
 }

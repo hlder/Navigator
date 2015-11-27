@@ -8,6 +8,12 @@
 	<string name="btn_forgot_psw">忘记密码？</string>
 	<string name="btn_register">立即注册</string>
 	
+	<string name="tab_top_friend">人气好友</string>
+	
+	<string name="tab_main">主页</string>
+	<string name="tab_ugc">互动</string>
+	<string name="tab_earnings">收益</string>
+	<string name="tab_mine">我</string>
 	
 	<string name="text_login_other">第三方登录</string>
 	<string name="text_qq">QQ</string>

@@ -3,11 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <ImageView 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="@drawable/blackboard"/>
     
-    
-	<FrameLayout 
-	    android:id="@+id/friendsLayout"
-	    android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-	    ></FrameLayout>
+
 </LinearLayout>

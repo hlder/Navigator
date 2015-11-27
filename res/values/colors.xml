@@ -9,6 +9,28 @@
     <color name="red">#FFFF0000</color>
     <color name="blue">#FF0000FF</color>
     <color name="green">#FF00FF00</color>
+    
+    
+    <color name="gray_text">#bfbfbf</color>
+    <color name="black_text">#545454</color>
+    <color name="tab_text">#ff7a39</color>
+    
+    <color name="bg_app">#f2f2f2</color>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <color name="mine_width_line">#DCDCDC</color>
     <color name="title_bg">#FF7A39</color>
     <color name="title_bg_yellow">#F9C80F</color>
