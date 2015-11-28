@@ -11,11 +11,14 @@
     <color name="green">#FF00FF00</color>
     
     
-    <color name="gray_text">#bfbfbf</color>
+    <color name="gray_text">#808080</color>
     <color name="black_text">#545454</color>
     <color name="tab_text">#ff7a39</color>
     
-    <color name="bg_app">#f2f2f2</color>
+    <color name="bg_app">#ebebeb</color>
+    <color name="click_eff">#efefef</color>
+    <color name="theme_color">#ff7a39</color>
+    
     
     
     

@@ -30,6 +30,7 @@ public class MainActivity extends AppActivity{
 		super.onCreate(savedInstanceState);
 		FragmentTabHost tabhost=new FragmentTabHost(this);
 		setContentView(tabhost);
+		setTitleBackground(R.drawable.bg_main_title);
 		
 		
 		listTabs=new ArrayList<View>();
@@ -55,6 +56,9 @@ public class MainActivity extends AppActivity{
 				lastSelectId=p;
 			}
 		});
+		
+		
+		tabhost.setPostion(3);//====================================¡Ÿ ±«–ªª===============================
 	}
 	
 	

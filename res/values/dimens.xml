@@ -8,6 +8,9 @@
     <!-- 好友列表中头像的大小 -->
     <dimen name="photo_list_size">50dip</dimen>
     
+    <!-- 设置界面头像的大小 -->
+    <dimen name="photo_set_size">70dip</dimen>
+    
     <!-- 登录界面头部logo的离上面的距离 -->
     <dimen name="main_logo_mar_top">20dip</dimen>
     <!-- 登录界面logo的大小 -->
@@ -21,6 +24,8 @@
     <!-- tab页字体的大小 -->
     <dimen name="tab_txt_size">12sp</dimen>
 
+    <!-- 设置界面最小字体 -->
+    <dimen name="set_txt_min_size">10sp</dimen>
     
     <!-- 控件之间的距离 -->
     <dimen name="view_mar">5dip</dimen>

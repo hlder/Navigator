@@ -5,6 +5,10 @@ import com.org.finalmvp.model.BaseModel;
 import com.org.finalmvp.presenter.BasePresenter;
 import com.org.finalmvp.view.BaseView;
 
+/**
+ * login界面的处理
+ * @author liangdong
+ */
 public class LoginPresenter extends BasePresenter{
 	public static final int TAG_LOGIN=1;
 	
@@ -25,7 +29,7 @@ public class LoginPresenter extends BasePresenter{
 	public void onModelCallBack(int tag, Object obj) {
 		switch (tag) {
 		case TAG_LOGIN:
-			
+			setDataChanage(obj);
 			break;
 		}
 	}
@@ -34,7 +38,7 @@ public class LoginPresenter extends BasePresenter{
 	 */
 	@Override
 	public void onModelErrorBack(int tag, String msg) {
-		
+		chanageViewUi(tag,msg);
 	}
 	
 	@Override

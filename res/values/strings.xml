@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">LHYApp</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">领航员</string>
 	<string name="btn_login">登录</string>
 	<string name="btn_forgot_psw">忘记密码？</string>
 	<string name="btn_register">立即注册</string>
@@ -31,4 +29,34 @@
     <string name="username_length_short">账号最少长度为6</string>
     <string name="password_null">密码不能为空</string>
     <string name="password_length_short">密码最少长度为6</string>
+    
+    
+    
+    <string name="set_login">立即登录</string>
+    <string name="set_register">快速注册</string>
+    
+    <string name="set_lable1">一键开户</string>
+    <string name="set_lable1_info">去开户</string>
+    <string name="set_lable2">已关联券商</string>
+    <string name="set_lable2_info">去关联</string>
+    <string name="set_lable3">我的钱包</string>
+    <string name="set_lable4">好友管理</string>
+    <string name="set_lable5">邀请有礼</string>
+    <string name="set_lable5_info">(邀请新人:TA获得10元，你获得5元)</string>
+    <string name="set_lable6">系统信息</string>
+    <string name="set_lable7">意见反馈</string>
+    <string name="set_lable8">系统设置</string>
+    
+    
+    <string name="set_edit">编辑</string>
+    <string name="set_people_state">动态</string>
+    <string name="set_people_fcous">关注</string>
+    <string name="set_people_friends">好友</string>
+    <string name="set_people_fllows">跟买者</string>
+    
+    <string name="error_http">服务器异常</string>
+    
+    <string name="user_digits">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    
+    
 </resources>

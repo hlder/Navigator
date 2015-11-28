@@ -14,10 +14,10 @@ public class AppActivity extends FragmentActivity implements BaseView{
 		
 	}
 	/**
-	 * 依赖注入后，当数据改变时固定修改
+	 * presenter需要修改ui的时候进行调用
 	 */
 	@Override
-	public void onChanageUi(int tag) {
+	public void onChanageUi(int tag, Object msg) {
 		
 	}
 }

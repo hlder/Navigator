@@ -1,7 +1,13 @@
 package com.epaybank.navigator.bean;
 
 public class UserInfo {
-	private int userId;
+	private String userId;
+	private String createDate;
+	private String pageSize;
+	private String clientId;
+	private String updateDate;
+	private String begin;
+	private String sailCurrency;
 	private String orderItem;
 	private String userSource;
 	private String regIp;
@@ -15,26 +21,56 @@ public class UserInfo {
 	private String longitude;
 	private String latitude;
 	private String weChat;
-	private long createDate;
 	private String qq;
 	private String orderType;
 	private String status;
-	private int pageSize;
-	private int clientId;
-	private long updateDate;
-	private int begin;
-	private int sailCurrency;
 	private String email;
 	private String followBuyGroupNum;
 	private String openId;
 	private String mobile;
 	private String clientType;
 	private String weibo;
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+	public String getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
+	}
+	public String getPageSize() {
+		return pageSize;
+	}
+	public void setPageSize(String pageSize) {
+		this.pageSize = pageSize;
+	}
+	public String getClientId() {
+		return clientId;
+	}
+	public void setClientId(String clientId) {
+		this.clientId = clientId;
+	}
+	public String getUpdateDate() {
+		return updateDate;
+	}
+	public void setUpdateDate(String updateDate) {
+		this.updateDate = updateDate;
+	}
+	public String getBegin() {
+		return begin;
+	}
+	public void setBegin(String begin) {
+		this.begin = begin;
+	}
+	public String getSailCurrency() {
+		return sailCurrency;
+	}
+	public void setSailCurrency(String sailCurrency) {
+		this.sailCurrency = sailCurrency;
 	}
 	public String getOrderItem() {
 		return orderItem;
@@ -114,12 +150,6 @@ public class UserInfo {
 	public void setWeChat(String weChat) {
 		this.weChat = weChat;
 	}
-	public long getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(long createDate) {
-		this.createDate = createDate;
-	}
 	public String getQq() {
 		return qq;
 	}
@@ -137,36 +167,6 @@ public class UserInfo {
 	}
 	public void setStatus(String status) {
 		this.status = status;
-	}
-	public int getPageSize() {
-		return pageSize;
-	}
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
-	public int getClientId() {
-		return clientId;
-	}
-	public void setClientId(int clientId) {
-		this.clientId = clientId;
-	}
-	public long getUpdateDate() {
-		return updateDate;
-	}
-	public void setUpdateDate(long updateDate) {
-		this.updateDate = updateDate;
-	}
-	public int getBegin() {
-		return begin;
-	}
-	public void setBegin(int begin) {
-		this.begin = begin;
-	}
-	public int getSailCurrency() {
-		return sailCurrency;
-	}
-	public void setSailCurrency(int sailCurrency) {
-		this.sailCurrency = sailCurrency;
 	}
 	public String getEmail() {
 		return email;

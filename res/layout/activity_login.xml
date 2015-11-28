@@ -24,6 +24,9 @@
 	        android:layout_marginTop="@dimen/activity_padding"
 	        android:background="@drawable/img_user_name"
 	        android:hint="@string/hint_username" 
+            android:digits="@string/user_digits"
+            android:singleLine="true"
+            android:maxLength="30"
 	        android:text="yuanfen7650"/>
 	
 	    <EditText
@@ -33,7 +36,10 @@
 	        android:layout_marginTop="@dimen/activity_padding"
 	        android:inputType="textPassword"
 	        android:background="@drawable/img_password"
+            android:singleLine="true"
 	        android:hint="@string/hint_password" 
+            android:digits="@string/user_digits"
+            android:maxLength="30"
 	        android:text="huoling7650"/>
 	
 	    <Button
@@ -103,25 +109,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_qq" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/btnWbLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
-
-            <ImageView
-                android:layout_width="@dimen/logo_min_size"
-                android:layout_height="@dimen/logo_min_size"
-                android:src="@drawable/login_wx" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_wb" />
         </LinearLayout>
 
         <LinearLayout

@@ -2,6 +2,7 @@ package com.epaybank.navigator.view.app;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -10,9 +11,14 @@ import android.widget.Toast;
 import com.epaybank.navigator.R;
 import com.epaybank.navigator.bean.UserInfo;
 import com.epaybank.navigator.presenter.LoginPresenter;
+import com.epaybank.navigator.utils.AppParams;
 import com.epaybank.navigator.view.AppActivity;
+import com.hld.library.frame.EventBus;
 import com.org.finalmvp.ViewData;
-
+/**
+ * µÇÂ¼½çÃæ
+ * @author liangdong
+ */
 public class LoginActivity extends AppActivity implements OnClickListener{
 	@ViewData
 	public UserInfo userInfo;
@@ -37,7 +43,6 @@ public class LoginActivity extends AppActivity implements OnClickListener{
 		findViewById(R.id.btnForgotPsd).setOnClickListener(this);
 		findViewById(R.id.btnRegister).setOnClickListener(this);
 		findViewById(R.id.btnQQLogin).setOnClickListener(this);
-		findViewById(R.id.btnWbLogin).setOnClickListener(this);
 		findViewById(R.id.btnWxLogin).setOnClickListener(this);
 	}
 
@@ -56,9 +61,6 @@ public class LoginActivity extends AppActivity implements OnClickListener{
 		case R.id.btnQQLogin://qqµÇÂ¼°´Å¥
 			
 			break;
-		case R.id.btnWbLogin://Î¢²©µÇÂ¼
-			
-			break;
 		case R.id.btnWxLogin://Î¢ÐÅµÇÂ¼
 			
 			break;
@@ -73,10 +75,19 @@ public class LoginActivity extends AppActivity implements OnClickListener{
 	public void onDataChanage() {
 		super.onDataChanage();
 		if(userInfo!=null){//µÇÂ¼³É¹¦
-			
-			
+//			Log.d("dddd", "userifo:"+userInfo.getCreateDate());
+			EventBus.post(AppParams.EVENTBUS_ACTION_LOGIN, null);
+			this.finish();
 		}
 	}
+	
+	@Override
+	public void onChanageUi(int tag, Object msg) {
+		super.onChanageUi(tag, msg);
+		Log.d("dddd", "³ö´íÐÞ¸Äui:"+msg.toString());
+		
+	}
+	
 	
 	
 	
