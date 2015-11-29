@@ -24,5 +24,6 @@
         <activity android:name="com.epaybank.navigator.view.app.MainActivity" />
         <activity android:name="com.epaybank.navigator.view.app.LoginActivity" />
         <activity android:name="com.epaybank.navigator.view.app.WebViewActivity" />
+        <activity android:name="com.epaybank.navigator.view.app.RegisterActivity"/>
     </application>
 </manifest>

@@ -47,7 +47,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_marginTop="@dimen/activity_padding"
-	        android:background="@drawable/btn_login_submit"
+	        android:background="@drawable/btn_orange_click"
 	        android:gravity="center"
 	        android:textColor="@color/white"
 	        android:text="@string/btn_login" />

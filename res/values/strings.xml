@@ -3,6 +3,7 @@
 
     <string name="app_name">领航员</string>
 	<string name="btn_login">登录</string>
+	<string name="btn_doregister">注册</string>
 	<string name="btn_forgot_psw">忘记密码？</string>
 	<string name="btn_register">立即注册</string>
 	
@@ -23,6 +24,10 @@
 	<string name="hint_username">请输入用户ID</string>
 	<string name="hint_password">请输入密码</string>
 	
+	<string name="hint_phone">请输入手机号码</string>
+	<string name="hint_auth">请输入验证码</string>
+	
+	<string name="btn_get_auth">获取验证码</string>
 	
 	
 	<string name="username_null">账号不能为空</string>
@@ -55,6 +60,16 @@
     <string name="set_people_fllows">跟买者</string>
     
     <string name="error_http">服务器异常</string>
+    
+    
+    
+    <string name="lable_agree_clause">同意接受领航员的</string>
+    <string name="clause_lable_server">《服务条款》</string>
+    
+    <string name="error_msg_gainfail">获取用户信息失败</string>
+    
+    <string name="text_user_type_pilot">领航员</string>
+    <string name="text_user_type_captain">船长</string>
     
     <string name="user_digits">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     

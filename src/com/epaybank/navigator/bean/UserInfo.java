@@ -1,58 +1,99 @@
 package com.epaybank.navigator.bean;
 
+/**
+ * 用户详细信息
+ * @author liangdong
+ */
 public class UserInfo {
-	private String userId;
-	private String createDate;
-	private String pageSize;
-	private String clientId;
-	private String updateDate;
-	private String begin;
-	private String sailCurrency;
-	private String orderItem;
-	private String userSource;
-	private String regIp;
+	private String sex;
+	private String isBindQQ;
+	private String companyDuties;
+	private String isBindWeibo;
+	private String provinceCode;
+	private String cityName;
+	private String cityCode;
+	private String provinceName;
 	private String type;
-	private String password;
-	private String version;
-	private String level;
-	private String pushSwitch;
-	private String lastCity;
-	private String userName;
-	private String longitude;
-	private String latitude;
-	private String weChat;
-	private String qq;
-	private String orderType;
-	private String status;
-	private String email;
-	private String followBuyGroupNum;
-	private String openId;
-	private String mobile;
-	private String clientType;
-	private String weibo;
-	public String getUserId() {
-		return userId;
+	private String isBindMobile;
+	private String isPerfectData;
+	private String updateDate;
+	private String isBindWeChat;
+	private String resume;
+	private String bindKhnoNum;
+	private String nickName;
+	private String age;
+	private String userId;
+	private String headImgPath;
+	private String createDate;
+	private String signature;
+	public String getSex() {
+		return sex;
 	}
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
-	public String getCreateDate() {
-		return createDate;
+	public String getIsBindQQ() {
+		return isBindQQ;
 	}
-	public void setCreateDate(String createDate) {
-		this.createDate = createDate;
+	public void setIsBindQQ(String isBindQQ) {
+		this.isBindQQ = isBindQQ;
 	}
-	public String getPageSize() {
-		return pageSize;
+	public String getCompanyDuties() {
+		return companyDuties;
 	}
-	public void setPageSize(String pageSize) {
-		this.pageSize = pageSize;
+	public void setCompanyDuties(String companyDuties) {
+		this.companyDuties = companyDuties;
 	}
-	public String getClientId() {
-		return clientId;
+	public String getIsBindWeibo() {
+		return isBindWeibo;
 	}
-	public void setClientId(String clientId) {
-		this.clientId = clientId;
+	public void setIsBindWeibo(String isBindWeibo) {
+		this.isBindWeibo = isBindWeibo;
+	}
+	public String getProvinceCode() {
+		return provinceCode;
+	}
+	public void setProvinceCode(String provinceCode) {
+		this.provinceCode = provinceCode;
+	}
+	public String getCityName() {
+		return cityName;
+	}
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	}
+	public String getCityCode() {
+		return cityCode;
+	}
+	public void setCityCode(String cityCode) {
+		this.cityCode = cityCode;
+	}
+	public String getProvinceName() {
+		return provinceName;
+	}
+	public void setProvinceName(String provinceName) {
+		this.provinceName = provinceName;
+	}
+	public String getType() {
+		if(type==null){
+			type="0";
+		}
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getIsBindMobile() {
+		return isBindMobile;
+	}
+	public void setIsBindMobile(String isBindMobile) {
+		this.isBindMobile = isBindMobile;
+	}
+	public String getIsPerfectData() {
+		return isPerfectData;
+	}
+	public void setIsPerfectData(String isPerfectData) {
+		this.isPerfectData = isPerfectData;
 	}
 	public String getUpdateDate() {
 		return updateDate;
@@ -60,148 +101,58 @@ public class UserInfo {
 	public void setUpdateDate(String updateDate) {
 		this.updateDate = updateDate;
 	}
-	public String getBegin() {
-		return begin;
+	public String getIsBindWeChat() {
+		return isBindWeChat;
 	}
-	public void setBegin(String begin) {
-		this.begin = begin;
+	public void setIsBindWeChat(String isBindWeChat) {
+		this.isBindWeChat = isBindWeChat;
 	}
-	public String getSailCurrency() {
-		return sailCurrency;
+	public String getResume() {
+		return resume;
 	}
-	public void setSailCurrency(String sailCurrency) {
-		this.sailCurrency = sailCurrency;
+	public void setResume(String resume) {
+		this.resume = resume;
 	}
-	public String getOrderItem() {
-		return orderItem;
+	public String getBindKhnoNum() {
+		return bindKhnoNum;
 	}
-	public void setOrderItem(String orderItem) {
-		this.orderItem = orderItem;
+	public void setBindKhnoNum(String bindKhnoNum) {
+		this.bindKhnoNum = bindKhnoNum;
 	}
-	public String getUserSource() {
-		return userSource;
+	public String getNickName() {
+		return nickName;
 	}
-	public void setUserSource(String userSource) {
-		this.userSource = userSource;
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
-	public String getRegIp() {
-		return regIp;
+	public String getAge() {
+		return age;
 	}
-	public void setRegIp(String regIp) {
-		this.regIp = regIp;
+	public void setAge(String age) {
+		this.age = age;
 	}
-	public String getType() {
-		return type;
+	public String getUserId() {
+		return userId;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public String getPassword() {
-		return password;
+	public String getHeadImgPath() {
+		return headImgPath;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setHeadImgPath(String headImgPath) {
+		this.headImgPath = headImgPath;
 	}
-	public String getVersion() {
-		return version;
+	public String getCreateDate() {
+		return createDate;
 	}
-	public void setVersion(String version) {
-		this.version = version;
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
 	}
-	public String getLevel() {
-		return level;
+	public String getSignature() {
+		return signature;
 	}
-	public void setLevel(String level) {
-		this.level = level;
-	}
-	public String getPushSwitch() {
-		return pushSwitch;
-	}
-	public void setPushSwitch(String pushSwitch) {
-		this.pushSwitch = pushSwitch;
-	}
-	public String getLastCity() {
-		return lastCity;
-	}
-	public void setLastCity(String lastCity) {
-		this.lastCity = lastCity;
-	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public String getLongitude() {
-		return longitude;
-	}
-	public void setLongitude(String longitude) {
-		this.longitude = longitude;
-	}
-	public String getLatitude() {
-		return latitude;
-	}
-	public void setLatitude(String latitude) {
-		this.latitude = latitude;
-	}
-	public String getWeChat() {
-		return weChat;
-	}
-	public void setWeChat(String weChat) {
-		this.weChat = weChat;
-	}
-	public String getQq() {
-		return qq;
-	}
-	public void setQq(String qq) {
-		this.qq = qq;
-	}
-	public String getOrderType() {
-		return orderType;
-	}
-	public void setOrderType(String orderType) {
-		this.orderType = orderType;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getFollowBuyGroupNum() {
-		return followBuyGroupNum;
-	}
-	public void setFollowBuyGroupNum(String followBuyGroupNum) {
-		this.followBuyGroupNum = followBuyGroupNum;
-	}
-	public String getOpenId() {
-		return openId;
-	}
-	public void setOpenId(String openId) {
-		this.openId = openId;
-	}
-	public String getMobile() {
-		return mobile;
-	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-	public String getClientType() {
-		return clientType;
-	}
-	public void setClientType(String clientType) {
-		this.clientType = clientType;
-	}
-	public String getWeibo() {
-		return weibo;
-	}
-	public void setWeibo(String weibo) {
-		this.weibo = weibo;
+	public void setSignature(String signature) {
+		this.signature = signature;
 	}
 }

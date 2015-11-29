@@ -1,18 +1,22 @@
 package com.epaybank.navigator.view.app;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.epaybank.navigator.R;
-import com.epaybank.navigator.bean.UserInfo;
+import com.epaybank.navigator.bean.UserAccountInfo;
+import com.epaybank.navigator.presenter.GainMyInfoPresenter;
 import com.epaybank.navigator.presenter.LoginPresenter;
 import com.epaybank.navigator.utils.AppParams;
+import com.epaybank.navigator.utils.DialogUtils;
 import com.epaybank.navigator.view.AppActivity;
+import com.epaybank.navigator.view.AppLoginActivity;
 import com.hld.library.frame.EventBus;
 import com.org.finalmvp.ViewData;
 /**
@@ -20,12 +24,20 @@ import com.org.finalmvp.ViewData;
  * @author liangdong
  */
 public class LoginActivity extends AppActivity implements OnClickListener{
-	@ViewData
-	public UserInfo userInfo;
+	public static final int REQUESTCODE_REGISTER=1;
 	
-	private LoginPresenter login;
+	@ViewData
+	public UserAccountInfo userInfo;
+	
+	private LoginPresenter loginP;
+	private GainMyInfoPresenter gainP;
 	
 	private EditText edtUsername,edtPassword;
+	
+	/**
+	 *  等待框
+	 */
+	private Dialog proDialog;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,7 +47,11 @@ public class LoginActivity extends AppActivity implements OnClickListener{
 	}
 	
 	private void prepare() {
-		login=new LoginPresenter(this);
+		proDialog=DialogUtils.getProgressDialog(this);
+		
+		
+		loginP=new LoginPresenter(this);
+		gainP=new GainMyInfoPresenter(this);
 		
 		edtUsername=(EditText) findViewById(R.id.edtUsername);
 		edtPassword=(EditText) findViewById(R.id.edtPassword);
@@ -50,13 +66,15 @@ public class LoginActivity extends AppActivity implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btnLogin://登录
+			proDialog.show();
 			doLogin();
 			break;
 		case R.id.btnForgotPsd://忘记密码
 			
 			break;
 		case R.id.btnRegister://注册
-			
+			Intent intent = new Intent(this,RegisterActivity.class);
+			startActivityForResult(intent, REQUESTCODE_REGISTER);
 			break;
 		case R.id.btnQQLogin://qq登录按钮
 			
@@ -76,16 +94,26 @@ public class LoginActivity extends AppActivity implements OnClickListener{
 		super.onDataChanage();
 		if(userInfo!=null){//登录成功
 //			Log.d("dddd", "userifo:"+userInfo.getCreateDate());
-			EventBus.post(AppParams.EVENTBUS_ACTION_LOGIN, null);
-			this.finish();
+			gainP.gainStateInfo(userInfo.getUserId());
 		}
 	}
 	
 	@Override
 	public void onChanageUi(int tag, Object msg) {
 		super.onChanageUi(tag, msg);
-		Log.d("dddd", "出错修改ui:"+msg.toString());
-		
+		switch (tag) {
+		case AppParams.PRESENTER_TAG_LOGIN://登录出错后
+			proDialog.dismiss();
+			Toast.makeText(this, ""+msg, Toast.LENGTH_SHORT).show();
+			break;
+		case AppParams.PRESENTER_TAG_GAIN_MY_INFO://获取用户详情成功
+			proDialog.dismiss();
+			proDialog.cancel();
+			EventBus.post(AppParams.EVENTBUS_ACTION_LOGIN, null);
+			setResult(AppLoginActivity.LOGIN_RESULT_CODE_SUCCESS, null);
+			this.finish();
+			break;
+		}
 	}
 	
 	
@@ -103,10 +131,15 @@ public class LoginActivity extends AppActivity implements OnClickListener{
         }else if(password.length()<6){//密码不小于6
         	showToast(this.getResources().getString(R.string.password_length_short));
         }else{//执行登录
-        	login.doLogin(username, password);
+        	loginP.doLogin(username, password);
         }
 	}
 	
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+	}
 	
 	
 	public void showToast(String msg) {

@@ -34,9 +34,31 @@ public class UrlFactory {
 	 * 获取个人信息，包括我和好友
 	 */
 	private static final String action_persion_info="member/user/heinfo.html";
+	/**
+	 * 获取用户状态
+	 */
+	private static final String action_gain_user_state="member/user/statRecord.json";
+	/**
+	 * 获取用户详细信息
+	 */
+	private static final String action_gain_my_info="member/user/myinfo.json";
 	
 	
 	
+	/**
+	 * 获取我的详细信息
+	 * @return
+	 */
+	public static String gainMyInfo(){
+		return AppParams.getBaseUrl()+action_gain_my_info;
+	}
+	/**
+	 * 获取用户的状态信息
+	 * @return
+	 */
+	public static String gainUserStates(String userId){
+		return AppParams.getBaseUrl()+action_gain_user_state+"?userId="+userId;
+	}
 	/**
 	 * 登录的URL
 	 */

@@ -5,11 +5,15 @@ import android.content.Context;
 
 public class DialogUtils {
 	
-	
-	public static void showProgressDialog(Context context){
+	/**
+	 * 统一progressDialog样式
+	 * @param context
+	 * @return
+	 */
+	public static ProgressDialog getProgressDialog(Context context){
 		ProgressDialog dialog=new ProgressDialog(context);
-		dialog.setMessage("loadding");
-		dialog.show();
+		dialog.setCancelable(false);
+		return dialog;
 	}
 	
 	

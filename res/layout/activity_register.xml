@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_padding"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+    
+	<EditText
+	        android:id="@+id/edtUsername"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_padding"
+	        android:background="@drawable/img_user_name_white"
+	        android:hint="@string/hint_username" 
+            android:digits="@string/user_digits"
+            android:singleLine="true"
+            android:maxLength="30"/>
+	<View style="@style/LineVertical"/>
+	    <EditText
+	        android:id="@+id/edtPassword"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="textPassword"
+	        android:background="@drawable/img_password_white"
+            android:singleLine="true"
+	        android:hint="@string/hint_password" 
+            android:digits="@string/user_digits"
+            android:maxLength="30"/>
+	    
+	    
+	    <EditText
+	        android:id="@+id/edtPhone"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_padding"
+	        android:background="@drawable/img_user_name_white"
+	        android:hint="@string/hint_phone" 
+            android:digits="@string/user_digits"
+            android:singleLine="true"
+            android:maxLength="30"/>
+	<View style="@style/LineVertical"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"    
+	    android:background="@color/white"
+	    >
+	    <EditText
+	        android:id="@+id/edtAuth"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/img_user_auth"
+	        android:layout_weight="1"
+            android:singleLine="true"
+	        android:hint="@string/hint_auth" 
+            android:digits="@string/user_digits"
+            android:maxLength="30"/>
+	    <View 
+	        style="@style/LineHorizontal"
+	        />
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+			android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+	        android:gravity="center"
+	        android:layout_weight="0"
+	        android:textColor="@color/theme_color"
+	        android:text="@string/btn_get_auth"/>
+	</LinearLayout>
+	    
+	
+	<Button
+	        android:id="@+id/btnRegister"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/activity_padding"
+	        android:background="@drawable/btn_orange_click"
+	        android:gravity="center"
+	        android:textColor="@color/white"
+	        android:text="@string/btn_doregister" />
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="10dip"
+	    >
+	    <CheckBox
+		    android:id="@+id/checkBox1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dip"
+		    android:button="@drawable/checkbox_protocol_selector"
+		    android:checked="true"
+		    android:text="@string/lable_agree_clause" />
+	    <TextView 
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="@color/theme_color"
+		    android:text="@string/clause_lable_server"/>
+	</LinearLayout>
+	
+	    
+</LinearLayout>

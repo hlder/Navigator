@@ -1,6 +1,11 @@
 package com.epaybank.navigator.presenter;
 
+import android.content.Context;
+
+import com.epaybank.navigator.bean.UserAccountInfo;
 import com.epaybank.navigator.model.LoginModel;
+import com.epaybank.navigator.utils.AppParams;
+import com.epaybank.navigator.utils.HttpTools;
 import com.org.finalmvp.model.BaseModel;
 import com.org.finalmvp.presenter.BasePresenter;
 import com.org.finalmvp.view.BaseView;
@@ -10,7 +15,6 @@ import com.org.finalmvp.view.BaseView;
  * @author liangdong
  */
 public class LoginPresenter extends BasePresenter{
-	public static final int TAG_LOGIN=1;
 	
 	private LoginModel model;
 	public LoginPresenter(BaseView view) {
@@ -19,7 +23,7 @@ public class LoginPresenter extends BasePresenter{
 	
 	
 	public void doLogin(String username,String password) {
-		model.login(TAG_LOGIN, username, password);
+		model.login(AppParams.PRESENTER_TAG_LOGIN, username, password);
 	}
 	
 	/**
@@ -28,7 +32,10 @@ public class LoginPresenter extends BasePresenter{
 	@Override
 	public void onModelCallBack(int tag, Object obj) {
 		switch (tag) {
-		case TAG_LOGIN:
+		case AppParams.PRESENTER_TAG_LOGIN://登陆成功,保存用户信息,Cookie
+			HttpTools.saveCookie((Context) getBaseView(),model.getCookie());//保存cookie
+			HttpTools.saveUserAccountInfo((Context) getBaseView(),(UserAccountInfo) obj);//保存用户信息
+			
 			setDataChanage(obj);
 			break;
 		}

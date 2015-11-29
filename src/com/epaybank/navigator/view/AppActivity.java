@@ -4,7 +4,7 @@ import com.hld.library.frame.FragmentActivity;
 import com.org.finalmvp.view.BaseView;
 
 public class AppActivity extends FragmentActivity implements BaseView{
-
+	
 	
 	/**
 	 * 依赖注入后，当数据发生改变时

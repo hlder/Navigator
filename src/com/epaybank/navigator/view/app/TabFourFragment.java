@@ -3,7 +3,6 @@ package com.epaybank.navigator.view.app;
 import java.lang.ref.WeakReference;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,7 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epaybank.navigator.R;
+import com.epaybank.navigator.bean.UserInfo;
+import com.epaybank.navigator.bean.UserState;
 import com.epaybank.navigator.utils.AppParams;
+import com.epaybank.navigator.utils.AppTools;
+import com.epaybank.navigator.utils.HttpTools;
 import com.epaybank.navigator.utils.UrlFactory;
 import com.epaybank.navigator.view.AppFragment;
 import com.hld.library.frame.EventBus;
@@ -36,6 +39,7 @@ public class TabFourFragment extends AppFragment implements OnClickListener,Even
 		registerEvents();
 		View view=inflater.inflate(R.layout.fragment_tab_four, null);
 		initClick(view);
+		init();
 		return view;
 	}
 	
@@ -73,14 +77,14 @@ public class TabFourFragment extends AppFragment implements OnClickListener,Even
 		case R.id.photo://点击头像
 			
 			break;
-			
 		case R.id.btn_login://用户登录
 			skipActivity(LoginActivity.class);
 			break;
 		case R.id.btn_register://用户注册
-			
+			skipActivity(RegisterActivity.class);
 			break;
 		case R.id.set_item_1://一键开户
+			
 			break;
 		case R.id.set_item_2://已关联券商
 			skipActivity(WebViewActivity.class, UrlFactory.associatedBrokers());
@@ -106,24 +110,67 @@ public class TabFourFragment extends AppFragment implements OnClickListener,Even
 		}
 	}
 	
+	private void init() {
+		showPersonOrLogin(HttpTools.isLogin(getActivity()));
+	}
+	
+	private void showPersonOrLogin(boolean flag) {
+		if(flag){
+			persionInfoLayout.setVisibility(View.VISIBLE);
+			unLoginLayout.setVisibility(View.GONE);
+		}else{
+			persionInfoLayout.setVisibility(View.GONE);
+			unLoginLayout.setVisibility(View.VISIBLE);
+		}
+	}
+	
 	/**
 	 * 加载我的个人信息
 	 */
 	private void initPersionInfo() {
-		ImageView imgPhoto = (ImageView) persionInfoLayout.findViewById(R.id.photo);//头像
-		TextView username=(TextView) persionInfoLayout.findViewById(R.id.user_name);//名字
-		TextView userRole=(TextView) persionInfoLayout.findViewById(R.id.user_role);//角色(船长或领航员)
-		TextView people_signature=(TextView) persionInfoLayout.findViewById(R.id.people_signature);//个性签名
-		TextView textState=(TextView) persionInfoLayout.findViewById(R.id.text_state);//动态的数字
-		TextView textFcous=(TextView) persionInfoLayout.findViewById(R.id.text_fcous);//关注的数字
-		TextView textFriend=(TextView) persionInfoLayout.findViewById(R.id.text_friend);//好友数
-		TextView textFllows=(TextView) persionInfoLayout.findViewById(R.id.text_fllows);//跟买者 数量
-		TextView textFllowLable=(TextView) persionInfoLayout.findViewById(R.id.text_fllow_lable);//跟买者的标签
-		
+		UserInfo userInfo = HttpTools.getMyInfo(getActivity());
+		if(userInfo!=null){
+			ImageView imgPhoto = (ImageView) persionInfoLayout.findViewById(R.id.photo);//头像
+			TextView username=(TextView) persionInfoLayout.findViewById(R.id.user_name);//名字
+			TextView userRole=(TextView) persionInfoLayout.findViewById(R.id.user_role);//角色(船长或领航员)
+			TextView people_signature=(TextView) persionInfoLayout.findViewById(R.id.people_signature);//个性签名
+			TextView textState=(TextView) persionInfoLayout.findViewById(R.id.text_state);//动态的数字
+			TextView textFcous=(TextView) persionInfoLayout.findViewById(R.id.text_fcous);//关注的数字
+			TextView textFriend=(TextView) persionInfoLayout.findViewById(R.id.text_friend);//好友数
+			TextView textFllows=(TextView) persionInfoLayout.findViewById(R.id.text_fllows);//跟买者 数量
+			TextView textFllowLable=(TextView) persionInfoLayout.findViewById(R.id.text_fllow_lable);//跟买者的标签
+			
+			username.setText(userInfo.getNickName());
+			if(userInfo.getSignature()!=null){
+				people_signature.setText(userInfo.getSignature());
+			}
+			AppTools.setUserType(userRole, userInfo.getType());
+			
+//			AppTools.displayImg(getActivity(), imgPhoto, userInfo.)
+			
+			UserState us=HttpTools.getUserState(getActivity());
+			if(us!=null){
+				textState.setText(us.getDynamicNum());
+				textFcous.setText(us.getAttentionNum());
+				textFriend.setText(us.getFriendsNum());
+				
+				if(AppTools.isTheLeader(userInfo.getType())){//是领航员
+					textFllows.setText(us.getFollowBuyNum());
+				}else{//是船长
+					textFllows.setText(us.getGroupNum());
+				}
+			}
+			
+			
+			
+		}
 		
 		
 		
 	}
+	
+	
+	
 
 	@Override
 	public void onEvent(String action, Object obj) {
